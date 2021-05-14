@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/****** This applies from 0px to 480px --> MOBILE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
+  color: #141414
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board {
   display: flex;
+  align-items: stretch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space:nowrap;
+  
+  margin: 1em;
+}
+
+.column {
+  background: #b7e3e4;
+  flex: 1 1 auto;
+
+  margin: 0.5em;
+  padding: 1em;
+
+  border-radius: 3px;;
+}
+
+.card {
+  display: flex;
+  width: 80vw;
+  min-height: 100vh;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  width: 100vw;
+  height: 5vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+section{
+  flex: 1;
+}
+
+section {
+  background: #b7e3e4;
+
+}
+
+section p {
+  background: #FFF;
+  padding: 1em;
+  margin: .5em;
+}
+
+/****** This applies from 480px onwards --> TABLET */
+
+@media (min-width: 480px) {
+  html,
+  body {
+    background: pink;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/****** This applies from 1025px onwards --> DESKTOP */
+
+@media (min-width: 1025px) {
+  html,
+  body {
+    background: #f4f4f4;
+    color: #141414
+  }
+
+  .board {
+    display: flex;
+    min-height: 100vh;
+    /* align-items: stretch; */
+
+    margin: 0.5em;
+  }
+
+  .column {
+    background: #b7e3e4;
+    flex: 1 1 auto;
+
+    margin: 0.5em;
+    padding: 1em;
+
+    border-radius: 3px;;
+  }
+
+  .card{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    width: 20vw;
+
+  }
+
+  header,
+  footer {
+    height: 60px;
+  }
+
+  section{
+    flex: 1;
+  }
+
+  footer:hover{
+    background-color: yellow;
   }
 }
