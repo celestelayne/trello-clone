@@ -5,7 +5,7 @@ const BoardColumn = ({ list, cards, setDragDrop }) => {
 
     const handleClick = (e) => {
       e.preventDefault();
-      console.log('The link was clicked.');
+      console.log('The link was clicked...render form');
     }
 
     return (
